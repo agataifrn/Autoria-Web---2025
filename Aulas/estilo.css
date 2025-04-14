@@ -1,0 +1,26 @@
+body {
+    background-color:bisque;
+}
+
+p {
+    font-family: 'Arial';
+    color:darkgreen;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color:coral;
+}
+
+.rodape {
+    color: darkcyan;
+    font-weight: bold;
+}
+
+#texto {
+    color:dodgerblue;
+}
+
+div {
+    background-color:antiquewhite;
+}
