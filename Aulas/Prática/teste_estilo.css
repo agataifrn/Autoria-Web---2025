@@ -1,0 +1,25 @@
+body {
+    background-color:bisque ;
+}
+
+h1 {
+    color: coral;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkgreen;
+}
+
+.rodape {
+    color:darkcyan ;
+    font-weight: bold;
+}
+
+#texto {
+    color:dodgerblue ;
+}
+
+div {
+    background-color: antiquewhite;
+}
