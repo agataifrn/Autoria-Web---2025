@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(104, 155, 202);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    background-color: aliceblue;
+    color: black;
+    padding: 20px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
