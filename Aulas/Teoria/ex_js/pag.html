@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+</head>
+<body>
+    <h1>Cadastro de Produtos</h1>
+    <hr />
+    <form>
+        <table>
+            <tr>
+                <td><b>Nome dos produtos:</b></td>
+                <td><input type="text" id="nomeProdutos" maxlength="50" /></td>
+            </tr>
+            <tr>
+                <td><b>Quantidade estoque:</b></td>
+                <td><input type="number" id="qntdEstoque" /></td>
+            </tr>
+            <tr>
+                <td><b>Valor unitário:</b></td>
+                <td><input type="number" id="valorUnitario" /></td>
+            </tr>
+            <tr>
+                <td><b>Fornecedor:</b></td>
+                <td><input type="text" id="fornecedor" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"> <!-- "colspan" Mescla as colunas -->
+                    <button type="button" onclick="gravarProduto()">Gravar</button>
+                    <button type="reset">Limpar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <hr />
+
+    <h2>Lista de produtos cadastrados</h2>
+    <table>
+        <tr>
+            <th>#</th> <!-- "<th>" Cabeçalho da tabela -->
+            <th>Nome do produto</th>
+            <th>Quantidade em estoque</th>
+            <th>Valor unitário</th>
+            <th>Fornecedor</th>
+            <th><button type="button">Alterar</button></th>
+            <th><button type="button">Excluir</button></th>
+        </tr>
+        <tbody id="conteudo">
+        <!-- <tbody> Corpo da tabelo, o que está abaixo do cabeçalho-->
+            <tr>
+                <td colspan="7">Nenhum produto cadastrado até o momento</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="funcoes.js"></script>
+</body>
+</html>
