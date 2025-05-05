@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+</head>
+<body>
+    <h1>Cadastro de Produtos (CASA) </h1>
+    <hr />
+    <form>
+        <table>
+            <tr>
+                <td><b>Nome do produto:</b></td>
+                <td><input type="text" id="nomeProduto" maxlength="50"></td>
+            </tr>
+            <tr>
+                <td><b>Quantidade no estoque:</b></td>
+                <td><input type="number" id="qntdEstoque"></td>
+            </tr>
+            <tr>
+                <td><b>Valor unitário:</b></td>
+                <td><input type="number" id="valorUnitario"></td>
+            </tr>
+            <tr>
+                <td><b>Fornecedor:</b></td>
+                <td><input type="text" id="fornecedor"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="button" onclick="gravarProduto()">Gravar</button>
+                    <button type="reset">Limpar</button>
+                </td>
+            </tr>
+        </table>
+        <hr />
+        <h2>Lista de produtos cadastrados</h2>
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Nome do produto</th>
+                <th>Quantidade em estoque</th>
+                <th>Valor unitário</th>
+                <th>Fornecedor</th>
+                <th>Alterar</th>
+                <th>Excluir</th>
+            </tr>
+        <tbody id="conteudo">
+            <tr>
+                <td colspan="7">
+                    Nenhum produto cadastrado até o momento.
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </form>
+    <script src="funcao.js"></script>
+</body>
+</html>
+
