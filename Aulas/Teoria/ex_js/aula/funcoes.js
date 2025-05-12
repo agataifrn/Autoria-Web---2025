@@ -1,6 +1,9 @@
 let listaProdutos = [];
+let emAlteracao = false;
+let indiceElementoAlteracao = -1;
 
-function gravarProduto() {
+function gravarProduto(event) {
+    event.preventDefault();
     let nomeProduto = document.getElementById("nomeProdutos").value;
     let qntdEstoque = document.getElementById("qntdEstoque").value;
     let valorUnitario = document.getElementById("valorUnitario").value;
@@ -14,8 +17,15 @@ function gravarProduto() {
     }
     // Criou a classe no propio js
 
-    listaProdutos.push(produto);
+    if (emAlteracao) {
+        listaProdutos[indiceElementoAlteracao] = produto;
+    } else {    
+        listaProdutos.push(produto);
+    }
+
+    limpar();
     listarProdutos();
+
 }
 
 function listarProdutos() {
@@ -35,9 +45,33 @@ function listarProdutos() {
                     <td>${produto.qntdEstoque}</td>
                     <td>${produto.valorUnitario}</td>
                     <td>${produto.fornecedor}</td>
+                    <td><button type="button" onclick="botaoAlterar(${indice})">Alterar</button></td>
+                    <td><button type="button" onclick="botaoExcluir(${indice})">Excluir</button></td>
                 </tr>
             `;
         })
     }
     document.getElementById("conteudo").innerHTML = conteudo;
+}
+
+function botaoExcluir(indice) {
+    if (confirm(`Deseja realmente excluir este produto? (Produto #${indice})`)) {
+            listaProdutos.splice(indice,1);
+    listarProdutos();
+    }
+
+}
+
+function botaoAlterar(indice) {
+    emAlteracao = true;
+    indiceElementoAlteracao = indice;
+    document.getElementById('nomeProdutos').value = listaProdutos[indice].nomeProduto;
+    document.getElementById('qntdEstoque').value = listaProdutos[indice].qntdEstoque;
+    document.getElementById('valorUnitario').value = listaProdutos[indice].valorUnitario;
+    document.getElementById('fornecedor').value = listaProdutos[indice].fornecedor;
+}
+
+function limpar() {
+    document.getElementById('meuForm').reset();
+    emAlteracao = false;
 }
