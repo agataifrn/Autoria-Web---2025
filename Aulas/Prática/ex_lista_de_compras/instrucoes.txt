@@ -1,0 +1,26 @@
+Lista de compras com JavaScript
+
+Objetivo
+Desenvolver um pequeno site web utilizando HTML e JavaScript que controle uma lista
+de compras do usuário.
+
+Instruções
+Você foi contratado para criar um script que ajude a gerenciar uma lista de compras. O
+script deverá realizar as seguintes tarefas:
+• Criar a lista de compras contendo o nome do item que deseja comprar
+• Comece com um array vazio chamado listaCompras.
+• Adicionar itens: O usuário pode adicionar itens à lista.
+• Remover itens: O usuário pode remover itens da lista pelo nome.
+• Exibir a lista: Exibir todos os itens presentes na lista.
+• Contar os itens: Mostrar a quantidade total de itens na lista.
+
+Requisitos
+• Use arrays para armazenar os itens.
+• Crie uma função para cada funcionalidade:
+• adicionarItem(item)
+• removerItem(item)
+• exibirLista()
+• contarItens()
+• Certifique-se de lidar com entradas inválidas (por exemplo, tentar remover um item
+que não está na lista)
+• Crie o código Javascript em um arquivo separado chamado funções.js.
