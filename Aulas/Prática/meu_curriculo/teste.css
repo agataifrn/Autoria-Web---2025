@@ -1,0 +1,42 @@
+/* Reset e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: black; /* Fundo geral preto */
+    color: aliceblue;
+    padding: 20px;
+    line-height: 1.6; /* Melhora espaçamento entre linhas */
+}
+
+/* Todos os blocos de conteúdo (divs principais) */
+#header, 
+.section {
+    background-color: rgb(57, 57, 57);
+    margin-bottom: 20px; /* Espaço entre blocos (mostra o fundo preto) */
+    padding: 25px;
+    border-radius: 8px; /* Bordas arredondadas suaves */
+}
+
+/* Estilo para títulos */
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: aliceblue; /* Garante cor do texto */
+}
+
+/* Estilo para parágrafos e listas */
+p, li {
+    margin-bottom: 10px;
+    background-color: transparent; /* Remove fundo cinza de elementos internos */
+}
+
+/* Classe para datas opacas */
+.data_opaca {
+    opacity: 0.8;
+    font-style: italic;
+    margin-bottom: 5px;
+}
